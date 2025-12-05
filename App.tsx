@@ -96,6 +96,23 @@ const COURSES: Course[] = [
       'Sem taxa de material',
       '30% de desconto até 31/12 (alunos novos)'
     ]
+  },
+  {
+    id: 'ufvjm',
+    title: 'UFVJM',
+    subtitle: 'Turma Exclusiva',
+    color: 'blue',
+    link: 'https://ufvjmaurea2026.netlify.app/',
+    description: 'Prepare para o vestibular próprio da Ufvjm de forma intensiva',
+    features: [
+      'Acesso a plataforma Áurea Prime',
+      'Turma online',
+      'Simulados',
+      '30% de desconto até 31/12 (alunos novos)',
+      'Material exclusivo',
+      'Sem taxa de material',
+      'Início: 07 de Fevereiro'
+    ]
   }
 ];
 
@@ -333,7 +350,7 @@ const App: React.FC = () => {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
             {COURSES.map((course, index) => (
               <CourseCard key={course.id} course={course} index={index} />
             ))}
