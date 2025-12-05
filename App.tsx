@@ -31,7 +31,6 @@ const COURSES: Course[] = [
       '10 Simulados completos + 8 compactos',
       'Diagnóstico Áurea em TRI',
       '30% de desconto até 31/12 (alunos novos)',
-      '50% de desconto até 31/12 (alunos áurea)',
       'Sem taxa de material',
       'Início: 02 de Fevereiro'
     ]
@@ -50,7 +49,6 @@ const COURSES: Course[] = [
       'Bolsa de 100% no curso de redação',
       '6 Simulados completos + 4 compactos',
       '30% de desconto até 31/12 (alunos novos)',
-      '50% de desconto até 31/12 (alunos áurea)',
       'Revisa Unimontes Gratuito',
       'Sem taxa de material',
       'Início: 02 de Março'
@@ -71,7 +69,6 @@ const COURSES: Course[] = [
       'Organização semanal de demandas',
       'Simulados completos (Enem, Unimontes e Ufvjm)',
       '30% de desconto até 31/12 (alunos novos)',
-      '50% de desconto até 31/12 (alunos áurea)',
       'I.A. Trio Perfeito',
       'Mentorias exclusivas',
       'Sem taxa de material',
@@ -97,8 +94,7 @@ const COURSES: Course[] = [
       'Terça 19h: Matemática',
       'Quinta 19h: Redação',
       'Sem taxa de material',
-      '30% de desconto até 31/12 (alunos novos)',
-      '50% de desconto até 31/12 (alunos áurea)'
+      '30% de desconto até 31/12 (alunos novos)'
     ]
   }
 ];
