@@ -233,13 +233,16 @@ const App: React.FC = () => {
                 Ver Turmas
                 <ArrowRight className="group-hover:translate-x-1 transition-transform" />
               </button>
-              <button
-                className="bg-transparent border border-white text-white px-10 py-5 rounded-full font-bold uppercase tracking-widest hover:bg-white hover:text-[#150f1d] transition-all"
+              <a
+                href="https://calendly.com/pedagogicoaurea/gravacoes"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-transparent border border-white text-white px-10 py-5 rounded-full font-bold uppercase tracking-widest hover:bg-white hover:text-[#150f1d] transition-all inline-block text-center"
                 data-hover="true"
               >
                 Agendar apresentação
                 (presencial ou online)
-              </button>
+              </a>
             </div>
           </motion.div>
 
