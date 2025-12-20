@@ -51,13 +51,13 @@ const CourseCard: React.FC<CourseCardProps> = ({ course, index }) => {
       </ul>
 
       {course.links ? (
-        // For especificas course - show two buttons
-        <div className="flex gap-3">
+        // For especificas course - show four buttons in 2x2 grid
+        <div className="grid grid-cols-2 gap-3">
           <a
             href={course.links.matematica}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex-1 bg-white text-black py-4 rounded-full font-bold uppercase tracking-widest text-xs flex items-center justify-center gap-2 hover:bg-black hover:text-white transition-colors"
+            className="group bg-white text-black py-4 rounded-full font-bold uppercase tracking-widest text-xs flex items-center justify-center gap-2 hover:bg-black hover:text-white transition-colors"
           >
             Matemática
             <ArrowRight className="w-4 h-4" />
@@ -66,9 +66,27 @@ const CourseCard: React.FC<CourseCardProps> = ({ course, index }) => {
             href={course.links.redacao}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex-1 bg-white text-black py-4 rounded-full font-bold uppercase tracking-widest text-xs flex items-center justify-center gap-2 hover:bg-black hover:text-white transition-colors"
+            className="group bg-white text-black py-4 rounded-full font-bold uppercase tracking-widest text-xs flex items-center justify-center gap-2 hover:bg-black hover:text-white transition-colors"
           >
             Redação
+            <ArrowRight className="w-4 h-4" />
+          </a>
+          <a
+            href={course.links.biologia}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group bg-white text-black py-4 rounded-full font-bold uppercase tracking-widest text-xs flex items-center justify-center gap-2 hover:bg-black hover:text-white transition-colors"
+          >
+            Biologia
+            <ArrowRight className="w-4 h-4" />
+          </a>
+          <a
+            href={course.links.quimica}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group bg-white text-black py-4 rounded-full font-bold uppercase tracking-widest text-xs flex items-center justify-center gap-2 hover:bg-black hover:text-white transition-colors"
+          >
+            Química
             <ArrowRight className="w-4 h-4" />
           </a>
         </div>

@@ -79,11 +79,13 @@ const COURSES: Course[] = [
   {
     id: 'especificas',
     title: 'ESPECÍFICAS',
-    subtitle: 'Matemática e Redação',
+    subtitle: 'Matemática, Redação, Biologia e Química',
     color: 'orange',
     links: {
       matematica: 'https://matematicaaurea2026.netlify.app/',
-      redacao: 'https://redacaoaurea2026.netlify.app/'
+      redacao: 'https://redacaoaurea2026.netlify.app/',
+      biologia: 'https://biologiaquimicaaurea2026.netlify.app/',
+      quimica: 'https://biologiaquimicaaurea2026.netlify.app/'
     },
     description: 'Cursos completos focados em potencializar suas notas nas disciplinas decisivas.',
     features: [
@@ -93,6 +95,8 @@ const COURSES: Course[] = [
       'Simulados específicos',
       'Terça 19h: Matemática',
       'Quinta 19h: Redação',
+      'Quarta 19h: Biologia',
+      'Sexta 19h: Química',
       'Sem taxa de material',
       '30% de desconto até 31/12 (alunos novos)'
     ]

@@ -14,6 +14,8 @@ export interface Course {
   links?: {
     matematica?: string;
     redacao?: string;
+    biologia?: string;
+    quimica?: string;
   };
 }
 
