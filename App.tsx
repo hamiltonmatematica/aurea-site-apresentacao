@@ -30,7 +30,7 @@ const COURSES: Course[] = [
       'Coleção Inteligência Áurea (5 volumes)',
       '10 Simulados completos + 8 compactos',
       'Diagnóstico Áurea em TRI',
-      '30% de desconto até 31/12 (alunos novos)',
+      '22% de desconto até 20/01 (alunos novos)',
       'Sem taxa de material',
       'Início: 02 de Fevereiro'
     ]
@@ -48,7 +48,7 @@ const COURSES: Course[] = [
       'Coleção Unimontes 2026 (3 volumes)',
       'Bolsa de 100% no curso de redação',
       '6 Simulados completos + 4 compactos',
-      '30% de desconto até 31/12 (alunos novos)',
+      '22% de desconto até 20/01 (alunos novos)',
       'Revisa Unimontes Gratuito',
       'Sem taxa de material',
       'Início: 02 de Março'
@@ -68,7 +68,7 @@ const COURSES: Course[] = [
       'Bolsa de 100% nos cursos de redação e matemática',
       'Organização semanal de demandas',
       'Simulados completos (Enem, Unimontes e Ufvjm)',
-      '30% de desconto até 31/12 (alunos novos)',
+      '22% de desconto até 20/01 (alunos novos)',
       'I.A. Trio Perfeito',
       'Mentorias exclusivas',
       'Sem taxa de material',
@@ -98,7 +98,7 @@ const COURSES: Course[] = [
       'Quarta 19h: Biologia',
       'Sexta 19h: Química',
       'Sem taxa de material',
-      '30% de desconto até 31/12 (alunos novos)'
+      '22% de desconto até 20/01 (alunos novos)'
     ]
   },
   {
@@ -112,7 +112,7 @@ const COURSES: Course[] = [
       'Acesso a plataforma Áurea Prime',
       'Turma online',
       'Simulados',
-      '30% de desconto até 31/12 (alunos novos)',
+      '22% de desconto até 20/01 (alunos novos)',
       'Material exclusivo',
       'Sem taxa de material',
       'Início: 07 de Fevereiro'

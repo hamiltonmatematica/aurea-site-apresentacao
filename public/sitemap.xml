@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://aureavestibulares.com.br/</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://aureavestibulares.com.br/logo-aurea.png</image:loc>
+      <image:title>Áurea Vestibulares Logo</image:title>
+    </image:image>
+  </url>
+  
+  <!-- ENEM Course Page -->
+  <url>
+    <loc>https://enemaurea2026.netlify.app/</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- UNIMONTES Course Page -->
+  <url>
+    <loc>https://unimontesaurea2026.netlify.app/</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- MED 360 Course Page -->
+  <url>
+    <loc>https://med360aurea.netlify.app/</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Matemática Course Page -->
+  <url>
+    <loc>https://matematicaaurea2026.netlify.app/</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Redação Course Page -->
+  <url>
+    <loc>https://redacaoaurea2026.netlify.app/</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Biologia e Química Course Page -->
+  <url>
+    <loc>https://biologiaquimicaaurea2026.netlify.app/</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- UFVJM Course Page -->
+  <url>
+    <loc>https://ufvjmaurea2026.netlify.app/</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+</urlset>
