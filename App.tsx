@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: Apache-2.0
 */
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ArrowRight, Laptop, BookOpen, Brain, Clock, Check } from 'lucide-react';
 import FluidBackground from './components/FluidBackground';
@@ -30,7 +30,6 @@ const COURSES: Course[] = [
       'Coleção Inteligência Áurea (5 volumes)',
       '10 Simulados completos + 8 compactos',
       'Diagnóstico Áurea em TRI',
-      '22% de desconto até 20/01 (alunos novos)',
       'Sem taxa de material',
       'Início: 02 de Fevereiro'
     ]
@@ -48,7 +47,6 @@ const COURSES: Course[] = [
       'Coleção Unimontes 2026 (3 volumes)',
       'Bolsa de 100% no curso de redação',
       '6 Simulados completos + 4 compactos',
-      '22% de desconto até 20/01 (alunos novos)',
       'Revisa Unimontes Gratuito',
       'Sem taxa de material',
       'Início: 02 de Março'
@@ -68,7 +66,6 @@ const COURSES: Course[] = [
       'Bolsa de 100% nos cursos de redação e matemática',
       'Organização semanal de demandas',
       'Simulados completos (Enem, Unimontes e Ufvjm)',
-      '22% de desconto até 20/01 (alunos novos)',
       'I.A. Trio Perfeito',
       'Mentorias exclusivas',
       'Sem taxa de material',
@@ -97,8 +94,7 @@ const COURSES: Course[] = [
       'Quinta 19h: Redação',
       'Quarta 19h: Biologia',
       'Sexta 19h: Química',
-      'Sem taxa de material',
-      '22% de desconto até 20/01 (alunos novos)'
+      'Sem taxa de material'
     ]
   },
   {
@@ -112,16 +108,44 @@ const COURSES: Course[] = [
       'Acesso a plataforma Áurea Prime',
       'Turma online',
       'Simulados',
-      '22% de desconto até 20/01 (alunos novos)',
       'Material exclusivo',
       'Sem taxa de material',
       'Início: 07 de Fevereiro'
+    ]
+  },
+  {
+    id: 'ligamed360',
+    title: 'LIGA MED 360',
+    subtitle: 'Mentoria com Dados',
+    color: 'blue',
+    link: 'https://ligamed360.netlify.app/',
+    description: 'Turma focada em Medicina (ENEM, Unimontes e UFVJM), com mentoria real e decisões baseadas em dados, não em quantidade de aulas.',
+    features: [
+      'Voltada para quem já tem boa base teórica',
+      'Quer parar de "estudar no escuro"',
+      'Planejamento semanal claro e individualizado',
+      'Ajustes a partir dos erros em simulados',
+      'Planejamento entregue todo domingo',
+      'Metas e prioridades semanais',
+      'Mais de 30 simulados anuais',
+      'Mentoria baseada em dados reais'
     ]
   }
 ];
 
 const App: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [showPromoPopup, setShowPromoPopup] = useState(true);
+
+  // Auto-close popup after 15 seconds
+  useEffect(() => {
+    if (showPromoPopup) {
+      const timer = setTimeout(() => {
+        setShowPromoPopup(false);
+      }, 15000);
+      return () => clearTimeout(timer);
+    }
+  }, [showPromoPopup]);
 
   const scrollToSection = (id: string) => {
     setMobileMenuOpen(false);
@@ -135,6 +159,69 @@ const App: React.FC = () => {
     <div className="relative min-h-screen text-white selection:bg-[#ff5b05] selection:text-white cursor-auto md:cursor-none bg-[#150f1d]">
       <CustomCursor />
       <FluidBackground />
+
+      {/* Promo Popup - Seletiva por Desempenho */}
+      <AnimatePresence>
+        {showPromoPopup && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/70 backdrop-blur-sm px-4"
+            onClick={() => setShowPromoPopup(false)}
+          >
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0, y: 50 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.8, opacity: 0, y: 50 }}
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+              className="relative bg-gradient-to-br from-[#2000f5] to-[#150f1d] p-8 md:p-12 rounded-[2rem] max-w-lg w-full text-center shadow-2xl border border-white/20"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Close Button */}
+              <button
+                onClick={() => setShowPromoPopup(false)}
+                className="absolute top-4 right-4 w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors"
+              >
+                <X className="w-5 h-5 text-white" />
+              </button>
+
+              {/* Badge */}
+              <div className="inline-block bg-[#ff5b05] text-white px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
+                Oportunidade Exclusiva
+              </div>
+
+              {/* Title */}
+              <h2 className="text-3xl md:text-4xl font-heading font-bold uppercase leading-tight mb-4 text-white">
+                Seletiva por<br />
+                Desempenho das<br />
+                <span className="text-[#ff5b05]">Notas Enem</span>
+              </h2>
+
+              {/* Description */}
+              <p className="text-white/80 text-lg mb-8 leading-relaxed">
+                A sua nota no Enem pode te ajudar a garantir uma bolsa de até <span className="text-[#ff5b05] font-bold">80%</span> nas nossas turmas do Áurea em 2026!
+              </p>
+
+              {/* CTA Button */}
+              <a
+                href="https://delicategiantpanda-n8n.cloudfy.live/form/3d4c98de-ad6c-49ec-ac52-1a984cd83bfe"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-[#ff5b05] hover:bg-white hover:text-[#150f1d] text-white px-8 py-4 rounded-full font-bold uppercase tracking-widest transition-all shadow-lg group"
+              >
+                Faça já sua simulação
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
+
+              {/* Timer indicator */}
+              <div className="mt-6 text-white/50 text-xs uppercase tracking-wider">
+                Fechando automaticamente em 15 segundos
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-6 md:px-12 py-6">
